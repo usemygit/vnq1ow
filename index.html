@@ -1,11 +1,96 @@
-<!DOCTYPE html>
-<html lang="en-us">
-  <head>
-    <meta charset="UTF-8">
-    <title>up Vnq1ow by usemygit</title>
-  </head>
-  <body>
 
-  i
-  </body>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>免费图片存取/上传图片</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" type="text/css" href="http://postimage.org/style.min.css" />
+<link rel="canonical" href="http://postimage.org/index.php?lang=chinese_simplified" />
+<link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png"/>
+<link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png"/>
+<link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png"/>
+<link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png"/>
+<link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png"/>
+<link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png"/>
+<link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png"/>
+<link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png"/>
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png"/>
+<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32"/>
+<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96"/>
+<link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16"/>
+<link rel="manifest" href="/manifest.json"/>
+<meta name="apple-mobile-web-app-title" content="Postimage"/>
+<meta name="application-name" content="Postimage"/>
+<meta name="msapplication-TileColor" content="#603cba"/>
+<meta name="msapplication-TileImage" content="/mstile-144x144.png"/>
+<meta name="theme-color" content="#ffffff"/><script type="text/javascript">
+<!--
+var text_alert="請指定的內容類型的文件/文件！";if(top.location!=self.location){var href=self.location.href;top.location=href;}if(navigator.userAgent.match(/(iPad|iPhone|iPod)/i)){document.title=document.getElementsByName('apple-mobile-web-app-title')[0].content;}
+-->
+</script>
+<style>
+html, body { height: 98%; }
+</style>
+</head>
+<body>
+<div id="center"><div id="header">
+	<p style="font-size:20px;color:#37587A;letter-spacing:12px"><a style='text-decoration: none;' href='http://'></a></p><br />
+	<p style="font-size:11px;color:#999;">
+		<span id="bmc" bmctext="添加到书签" bmctitle="! Postimage.org -免费图片存取/上传图片" bmcurl="http:///"></span><a href="http:///register.php">注册</a> |
+		<a href="http:///profile.php">登录</a>
+	</p>
+</div>
+<div id="content"><div id="answer1" class="box" onMouseOut="toggle('answer1'); return false;" style="display:none">您可以上传以下格式的图片： jpg, png, gif, bmp, psd, pdf, tiff<br /><br />图片大小限制为： 8Mb</div>
+<div id="answer2" class="box" style="display:none">图片包含裸露必须清楚地标明选择'并不安全工作'领域。图片包含裸露，但尚未标记，这样，将被刪除。</div>		<div id="container">
+			<div id="progress" style="display:none;position:absolute;top:auto;z-index:1000;height:212px;width: 492px; background:#FFFFFF">
+				<center>
+				<br /><br /><div class="progress-text">图片上传中...<br /><br /><span class="overall-title">&nbsp;</span></div><br />
+				<div style="height:14px;width:300px;border:1px solid #666666"><div class="progress overall-progress" id="status_uploading" style="width:0px;max-width:298px;float:left;height:12px;background-color:#cccccc;border:1px solid #fff"></div></div><br /><br />
+				<form method='post' action=''><input type='submit' id="button_cancel" value="Cancel" class="submit" /></form>
+				</center>
+			</div>
+			<form name='myForm' id='myForm' method='post' action='' enctype="multipart/form-data" onsubmit="return submit_form();">
+			<input type='hidden' name='mode' id='mode' value='local' /><input type='hidden' name='areaid' id='areaid' value='' /><input type='hidden' name='hash' id='hash' value='' /><input type='hidden' name='code' id='code' value='' /><input type='hidden' name='content' id='content' value='' /><input type='hidden' name='tpl' id='tpl' value='.' /><input type='hidden' name='ver' id='ver' value='' /><input type='hidden' name='addform' id='addform' value='' /><input type='hidden' name='mforum' id='mforum' value='' /><input type='hidden' name='session_upload' id='session_upload' value='' /><input type='hidden' name='um' id='um' value='computer' /><input type='hidden' name='forumurl' id='forumurl' value='http://postimage.org/' /><input type='hidden' name='gallery_id' id='gallery_id' value='' /><input type='hidden' name='upload_error' id='upload_error' value='' />			<table border="0" cellpadding="3" cellspacing="0">
+				<tr>
+					<td>上传图片:</td>
+					<td nowrap><b>本地图片</b> | <a href="index.php?um=web">网络图片</a></td>
+				</tr>
+				<tr>
+					<td width="215px"><span onmouseover="toggle('answer1'); return false;" onMouseOut="toggle('answer1'); return false;" class='tltp'>选择文件夹：</span></td>
+					<td><input type="hidden" name="MAX_FILE_SIZE" value="16777216" /><input type="file" id="file_upload" name="upload[]" size="31" style="background: #F8F8F8; border: 1px solid #888; width:240px;font: 11px Verdana, Arial, Helvetica, sans-serif;padding:2px;" min="1" max="50" multiple="multiple" /></td>
+				</tr>
+						<tr>
+			<td id="description">缩放:</td>
+			<td>
+			<input type="hidden" name='ui' id='ui' value="" />
+			<select name="optsize" id="optsize" style="width:241px;" onchange="$.cookie(this.name,this.value)">
+			<option value="0">缩放比例</option>
+			<option value="1">100x75 (avatar)</option>
+			<option value="2">150x112 (thumbnail)</option>
+			<option value="3">320x240 (for websites and email)</option>
+			<option value="4">640x480 (for message boards)</option>
+			<option value="5">800x600 (15-inch monitor)</option>
+			<option value="6">1024x768 (17-inch monitor)</option>
+			<option value="7">1280x1024 (19-inch monitor)</option>
+			<option value="8">1600x1200 (21-inch monitor)</option>
+			</select>
+			</td>
+		</tr>
+				<tr>
+			<td id="description"><span onmouseover="toggle('answer2'); return false;" onMouseOut="toggle('answer2'); return false;" class='tltp'>图片性质:</span></td>
+			<td nowrap><label for="l_adult_yes" style="color: #FF2400;"><input id="l_adult_yes" type="radio" name="adult" value="yes" onclick="$.cookie(this.name,this.value)" class="radio" /> 不适合开放内容</label>&nbsp;&nbsp;<label for="l_adult_no"><input id="l_adult_no" type="radio" name="adult" value="no" onclick="$.cookie(this.name,this.value)" class="radio" /> 可开放内容</label></td>
+		</tr>
+						<tr>
+					<td></td>
+					<td><input type="submit" name="btSubmit" id="btSubmit" value="上传！" class="submit" /></td>
+				</tr>
+			</table>
+			</form>
+		</div>
+	</div>
+<div id="footer">
+	
+</div>
+</div>
+</body>
 </html>
